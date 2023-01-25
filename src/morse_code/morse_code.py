@@ -8,4 +8,8 @@ morse_map = {".-": "A", "-...": "B", "-.-.": "C", "-..": "D", ".": "E", "..-.": 
 
 
 def morse_code(string):
+    stringArr=string.split(" ")
+    
+    returnstring=[morse_map[c] if c in morse_map else " " for c in stringArr]
+    return "".join(returnstring).replace("   "," ")
     pass
