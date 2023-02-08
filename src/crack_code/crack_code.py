@@ -11,7 +11,6 @@ def crack_code(encrypt):
     chain = sorted(chain.split("-"), key=lambda e: (-len(e), e))
 
     filterChain = [letter for letter in chain if len(letter) >= len(chain[3])]
-    
     for index, letter in enumerate(endingKey):
         if letter != filterChain[index][0]:
             return False
