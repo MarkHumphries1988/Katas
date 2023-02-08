@@ -1,5 +1,10 @@
 from src.caesar_cipher.caesar_cipher import caesar
 
+def test_shift_zero_leaves_same():
+    expected="hello"
+    result=caesar("hello",0)
+    assert result==expected
+
 def test_shifts_single_letter_1():
     expected="y"
     result=caesar("x",1)
